@@ -1,0 +1,35 @@
+{
+  "name": "reciclaje-anodos-pgam",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Andrestone91/.git",
+  "author": "Andres <andrestone9191@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack",
+    "build": "cross-env NODE_ENV=production webpack",
+    "deploy": "firebase deploy",
+    "start": "live-server"
+  },
+  "dependencies": {
+    "@types/node": "^18.15.2",
+    "@types/react": "^18.0.28",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "live-server": "^1.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.9.0",
+    "react-slick": "^0.29.0",
+    "recoil": "^0.7.7",
+    "slick-carousel": "^1.8.1",
+    "style-loader": "^3.3.2",
+    "tsconfig-paths-webpack-plugin": "^4.0.1"
+  }
+}

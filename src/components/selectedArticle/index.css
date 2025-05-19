@@ -1,0 +1,62 @@
+.info__title {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.contenedor {
+  display: flex;
+  flex-direction: column;
+}
+.contenedor__combo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  font-family: "roboto";
+  margin-top: 50px;
+}
+@media (min-width: 769px) {
+  .contenedor__combo {
+    display: flex;
+    align-items: inherit;
+    flex-direction: initial;
+  }
+}
+.text__price {
+  font-size: 40px;
+}
+.contenedor__descripcion {
+  font-size: 22px;
+  width: 100%;
+}
+@media (min-width: 769px) {
+  .contenedor__descripcion {
+    width: 50%;
+  }
+}
+.descripcion {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 15px;
+}
+.caracteristicas {
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 15px;
+  justify-content: space-evenly;
+  display: flex;
+}
+.en__stock {
+  font-size: 20px;
+  padding: 5px;
+  border-radius: 20px;
+}
+.boton {
+  font-size: 22px;
+  padding: 20px;
+  width: 200px;
+  background: fixed;
+  border-radius: 5px;
+}
+.separador {
+  width: 200px;
+}

@@ -1,0 +1,27 @@
+.contenedor_product {
+  border: solid 0.5px lightgray;
+  height: 350px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: black;
+  box-shadow: 0 2px 4px #0000001a;
+}
+.item-image {
+  width: 100%;
+  object-fit: contain;
+  height: 60%;
+  box-shadow: 0 2px 1px #0000001a;
+}
+.contenedor_product_description {
+  height: 40%;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  font-family: Roboto, sans-serif;
+  text-decoration: none;
+}
+.textNoDecoration {
+  text-decoration: none;
+}
