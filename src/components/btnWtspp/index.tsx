@@ -7,7 +7,7 @@ function BotonWhatsapp() {
   return (
     <div className={css["btn-wsp"]}>
       <a
-        href="https://api.whatsapp.com/send?phone=5491133768206"
+        href="https://api.whatsapp.com/send?phone=5491158208081"
         target="_blank"
       >
         <img className={css["img_whats"]} src={imgWhatsapp} />

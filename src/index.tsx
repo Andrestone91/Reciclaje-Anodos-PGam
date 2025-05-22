@@ -4,7 +4,7 @@ import { AppRoutes } from "./router";
 import { RouterProvider } from "react-router-dom";
 import { RecoilRoot } from "recoil";
 
-const element = document.getElementById("hello-example");
+const element = document.getElementById("root");
 createRoot(element).render(
   <RecoilRoot>
     <Suspense>
