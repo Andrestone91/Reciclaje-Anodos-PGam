@@ -7,16 +7,19 @@ const burger = '/src/assets/burger.png';
 const items: MenuProps['items'] = [
   {
     label: (
-      <a href="https://www.antgroup.com" className={css.menu1} target="_blank" rel="noopener noreferrer">
-        1st menu item
+      <a href="#bienvenida" className={css.burgerText} rel="noopener noreferrer">
+       Inicio
       </a>
     ),
     key: '0',
   },
   {
+    type: 'divider',
+  },
+  {
     label: (
-      <a href="https://www.aliyun.com" target="_blank" rel="noopener noreferrer">
-        2nd menu item
+      <a href="#nosotros" className={css.burgerText} rel="noopener noreferrer">
+       Quienes somos
       </a>
     ),
     key: '1',
@@ -25,7 +28,22 @@ const items: MenuProps['items'] = [
     type: 'divider',
   },
   {
-    label: '3rd menu item',
+    label: (
+      <a href="#servicios" className={css.burgerText} rel="noopener noreferrer">
+        Servicios
+      </a>
+    ),
+    key: '2',
+  },
+   {
+    type: 'divider',
+  },
+  {
+    label: (
+      <a href="#contacto" className={css.burgerText} rel="noopener noreferrer">
+       Contacto
+      </a>
+    ),
     key: '3',
   },
 ];

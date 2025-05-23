@@ -4,7 +4,8 @@ import css from "./index.css";
 import { OptionMenu } from "components/menu";
 
 function Header() {
-const logo = "src/assets/logo-muestra.jpg";
+// const logo = "src/assets/logo-muestra.jpg";
+const logo = "/src/assets/logo-2.JPG";
 
   return (
     <div className={css["header-contenedor"]}>
