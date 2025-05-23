@@ -1,3 +1,67 @@
 .bodyc {
   display: block;
 }
+.bienvenida {
+  height: 668px;
+  width: 100%;
+  padding-top: 102px;
+  /* background: linear-gradient(rgba(5, 4, 8, 0.6), rgba(5, 4, 8, 0.6)),
+    url("../assets/portada-test.jpeg"); */
+  background-position: right;
+  background-size: cover;
+}
+@media (min-width: 960px) {
+  .bienvenida {
+    /* background: linear-gradient(rgba(5, 4, 8, 0.6), rgba(5, 4, 8, 0.6)),
+      url("../assets/portada-test.jpeg"); */
+    background-position: top;
+    background-size: cover;
+  }
+}
+.bienvenida__contenedor {
+  fill: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@media (min-width: 960px) {
+}
+.bienvenida__contenedor-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 960px) {
+  .bienvenida__contenedor-text {
+    justify-content: initial;
+    padding-bottom: 70px;
+  }
+}
+.titulo-principal {
+  font-family: "Radio Canada", sans-serif;
+  /* font-weight: 500;
+  color: white;
+  padding-left: 6px;
+  font-size: 1.5rem; */
+}
+@media (min-width: 960px) {
+  .titulo-principal {
+    font-size: 30px;
+  }
+}
+.titulo-principal-animacion {
+  /* color: black;
+  position: relative;
+  font-family: "Radio Canada", sans-serif;
+  -webkit-text-stroke: 0.3vw black;
+  font-size: 2.5rem;
+  margin: 0; */
+}
+@media (min-width: 960px) {
+  .titulo-principal-animacion {
+    font-size: 50px;
+  }
+}
