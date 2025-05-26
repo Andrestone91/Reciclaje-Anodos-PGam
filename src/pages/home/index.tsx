@@ -8,7 +8,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "gray" }}
+      style={{ ...style, display: "none", background: "gray" }}
       onClick={onClick}
     />
   );
@@ -18,7 +18,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "block", background: "gray" }}
+      style={{ ...style, display: "none", background: "gray" }}
       onClick={onClick}
     />
   );
@@ -37,63 +37,57 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 4000,
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
   return (
     <div className={css.bodyc}>
+
+    {/* bienvenida */}
       <section id="bienvenida" className={css.bienvenida}>
-   <div className={css["slick-conatainer"]}>
-      <Slider {...settings}>
-        <div>
-       <img src={img1} alt="" width="1580" height="740" style={{
+       <div className={css["slick-conatainer"]}>
+         <Slider {...settings}>
+          <div>
+            <img src={img1} alt="" width="1580" height="740" style={{
                   objectFit: "cover",
-                    width: "100%",
-                    height: "70vh"
+                  width: "100%",
+                  height: "70vh"
                 }}/>
-        </div>
-        <div>
-       <img src={img1} alt="" width="1580" height="740" style={{
+          </div>
+          <div>
+            <img src={img2} alt="" width="1580" height="740" style={{
                   objectFit: "cover",
-                     width: "100%",
-                   height: "70vh"
+                  width: "100%",
+                  height: "70vh"
                 }}/>
-        </div>
-      </Slider>
-              {/* <Slider {...settings} className={css.carouselBg}>
-          {images.map((src, i) => (
-            <div key={i}>
-              <img
-                src={src}
-                alt=""
-                width="1580"
-                  height="740"
-                style={{
-                  objectFit: "cover",
-                  position: "absolute",
-                   height: "70vh"
-                }}
-              />
-            </div>
-          ))}
-        </Slider> */}
-    </div>
+           </div>
+        </Slider>
+      </div>
         <div className={css["bienvenida_contenedor"]}>
-          {/* <div className={css["bienvenida__contenedor-text"]}>
-            <h1 className={css["titulo-principal"]}>Bienvenidos a&nbsp;</h1>
-             <h1 className={css["titulo-principal-animacion"]}>Reciclaje Anodos PGam</h1>
-          </div> */}
+          <div className={css["bienvenida__contenedor-text"]}>
+            {/* <h1 className={css["titulo-principal"]}>Bienvenidos a&nbsp;</h1> */}
+             <h1 className={css["titulo-principal"]}>Reciclaje Anodos PGam</h1>
+          </div>
         </div>
       </section>
+
+      {/* Nosotros */}
       <section id="nosotros" className={css.nosotros}>
-        <h1>Nosotros</h1>
+        <div className={css["descipcion__contenedor"]}>
+             <h1 className={css["title_text"]}>Sobre nosotros</h1>
+        </div>
       </section>
+
+      {/* Servicios */}
       <section id="servicios" className={css.servicios}>
-        <h1>Servicios</h1>
+    <h1 className={css["title_text"]}>Servicios</h1>
       </section>
+
+      {/* Contacto */}
       <section id="contacto" className={css.contacto}>
-        <h1>Contacto</h1>
+        <h1 className={css["title_text"]}>Contacto</h1>
       </section>
     </div>
   );
