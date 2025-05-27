@@ -103,3 +103,133 @@
   display: flex;
   flex-direction: column;
 }
+.servicios__text {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  padding: 25px 35px 20px;
+  margin: 0;
+}
+@media (min-width: 960px) {
+  .servicios__text {
+    padding: 20px 0 0 0;
+    width: 600px;
+  }
+}
+.servicios {
+   background-color: #f1fbf9;
+  padding: 100px 0;
+}
+.servicios__contenedor-info-y-video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .servicios__contenedor-info-y-video {
+    flex-direction: initial;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+.descripcion__contenedor_info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.ul-custom {
+  text-align: left;
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  padding-top: 20px;
+  padding: 20px;
+  box-shadow: inset 0 0em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em rgba(0, 0, 0, 30%);
+  border-radius: 5px;
+  width: 290px;
+  display: none;
+}
+@media (min-width: 960px) {
+  .ul-custom {
+    width: 326px;
+  }
+}
+.cont__serv {
+  display: flex;
+}
+.img__services {
+  width: 32px;
+  height: 32px;
+}
+.caja__servicios {
+  display: grid;
+  grid-template-columns: 180px 180px;
+  grid-template-rows: 150px 150px;
+  justify-items: center;
+  align-items: end;
+  margin-top: 20px;
+}
+@media (min-width: 1500px) {
+  .caja__servicios {
+    grid-template-columns: 180px 180px 180px 180px;
+    grid-template-rows: auto;
+    padding-right: 80px;
+  }
+}
+.caja__servicios-telefonica,
+.caja__servicios-catalogo,
+.caja__servicios-Documentación,
+.caja__servicios-Liquidación {
+  text-align: center;
+}
+.caja__servicios-img {
+  margin-bottom: 20px;
+}
+.caja__servicios-text {
+  color: cadetblue;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  font-size: 18px;
+  height: 75px;
+}
+.caja-video {
+  width: 340px;
+  height: 500px;
+  background-color: mediumaquamarine;
+  border-radius: 10px;
+  padding: 10px;
+}
+@media (min-width: 960px) {
+  .caja-video {
+    width: 310px;
+    height: 400px;
+  }
+}
+.video-el {
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 960px) {
+  .video-el {
+    width: 100%;
+    height: 100%;
+  }
+}
+.slider {
+  width: 350px;
+  margin: auto;
+  overflow: hidden;
+}
+.slider .services__img-desktop {
+  display: none;
+}
+@media (min-width: 960px) {
+  .slider .services__img-movil {
+    display: none;
+  }
+}
+@media (min-width: 960px) {
+  .slider .services__img-desktop {
+    display: flex;
+    margin: 0;
+  }
+}
