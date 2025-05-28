@@ -2,7 +2,13 @@ import React from "react";
 import css from "./index.css";
 import Slider from "react-slick";
 
-// const settings = { dots: true, infinite: true, slidesToShow: 1, slidesToScroll: 1 };
+const img1 = "src/assets/portada-test-2.jpg";
+const img2 = "src/assets/portada-test-3.jpg";
+const icoMaps = "src/assets/maps.png";
+const icoCorreo = "src/assets/correo.png";
+const icoWhatsapp = "src/assets/whatsapp-2.png";
+const icoFacebook = "src/assets/facebook.png";
+
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -23,8 +29,7 @@ function SamplePrevArrow(props) {
     />
   );
 }
-const img1 = "src/assets/portada-test-2.jpg";
-const img2 = "src/assets/portada-test-3.jpg";
+
 function Home() {
   // icon start
   // icon end
@@ -199,7 +204,7 @@ function Home() {
         className={css["servicios__contenedor-info-y-video"]}
         style={{ paddingTop: "20px", gap: "75px" }}
       >
-        <div className={css["caja-video"]}>
+        {/* <div className={css["caja-video"]}>
           <video
             className={css["video-el"]}
             height="320"
@@ -211,34 +216,122 @@ function Home() {
             <source src="./assets/video.mp4" type="video/mp4" />
             tu navegador no es compatible con videos HTML5
           </video>
-        </div>
-        <div className={css["slider"]}>
+        </div> */}
+        {/* <div className={css["slider"]}>
           <ul className={css["services__img-movil"]}>
-            {/* <li><img src="./assets/galeria-9-mid1.jpeg" alt="" /></li>
+            <li><img src="./assets/galeria-9-mid1.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-9-mid2.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-11.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-10.jpeg" alt="" /></li>
             <li><img src="./assets/galeria.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-12.jpeg" alt="" /></li>
-            <li><img src="./assets/galeria-8.jpeg" alt="" /></li> */}
+            <li><img src="./assets/galeria-8.jpeg" alt="" /></li>
           </ul>
 
           <ul className={css["services__img-desktop"]}>
-            {/* <li><img src="./assets/galeria-desktop-9.jpeg" alt="" /></li>
+            <li><img src="./assets/galeria-desktop-9.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-desktop-10.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-desktop-11.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-desktop-13.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-desktop.jpeg" alt="" /></li>
             <li><img src="./assets/galeria-desktop-12.jpeg" alt="" /></li>
-            <li><img src="./assets/galeria-desktop-8.jpeg" alt="" /></li> */}
+            <li><img src="./assets/galeria-desktop-8.jpeg" alt="" /></li>
           </ul>
-        </div>
+        </div> */}
       </div>
       </section>
 
       {/* Contacto */}
       <section id="contacto" className={css.contacto}>
-        <h1 className={css["title_text"]}>Contacto</h1>
+        <h1 className={`${css["title_text"]} ${css["valores"]} ${css["contacto-text"]}`}>Contacto</h1>
+        <div className={css["contenedor-contacto"]}>
+          <div className={css["contenedor-contacto-text-y-ubi"]}>
+            <div className={`${css["contacto__info"]} ${css["ubica"]}`}>
+              <img className={css["contacto__ico"]} src={icoMaps} alt="" />
+
+              <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`} 
+                >UBICACION <br />
+                <p className={css["text__ubi"]}>
+                  Berazategui <br />
+                  calle 142 A. nro 3026 <br />
+                  e/ calle 30 y calle 31
+                </p>
+              </label>
+            </div>
+            <div className={css["contacto__info"]}>
+              <img className={css["contacto__ico"]} src={icoCorreo} alt="" />
+              <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`} 
+                >EMAIL <br />
+                <p className={css["text__ubi"]}>catmetal.arg@gmail.com</p>
+              </label>
+            </div>
+
+            <div className={css["contacto__info"]}>
+              <img className={css["contacto__ico"]} src={icoWhatsapp} alt="" />
+              <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`}
+                >TELEFONOS <br />
+                <p className={css["text__ubi"]}>
+                  +54 9 112257-2844 <br />
+                  +54 9 115820-8081 <br />
+                </p>
+              </label>
+            </div>
+
+            <div className={css["contacto__info"]}>
+              <img
+                className={css["contacto__ico"]}
+                src={icoFacebook}
+                alt=""
+              />
+              <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`}>
+                <a
+                  className={css["links"]}
+                  target="_blank"
+                  href="https://www.facebook.com/profile.php?id=100046977355703"
+                  >FACEBOOK <br />
+                  Catmetal
+                </a>
+              </label>
+            </div>
+          </div>
+          <div></div>
+
+          <div className={css["maps__contenedor"]}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d819.2628809279151!2d-58.203388370800674!3d-34.779478197254576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a328bc9d3decf5%3A0xe8831b70cc191bbe!2sC.%20142%20A%203026%2C%20B1860BGN%20Villa%20Espa%C3%B1a%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1668720656538!5m2!1ses!2sar"
+              width="360"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div className={css["maps__contenedor-desktop"]}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5511.314801380485!2d-58.20530880187855!3d-34.77958232986839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a328bc9d3decf5%3A0xe8831b70cc191bbe!2sC.%20142%20A%203026%2C%20B1860BGN%20Villa%20Espa%C3%B1a%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1669401162807!5m2!1ses!2sar"
+              width="600"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+
+          <div className={css["maps__contenedor-desktop-1500"]}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.051655703142!2d-58.2050298851428!3d-34.77947487432503!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a328bc9d3decf5%3A0xe8831b70cc191bbe!2sC.%20142%20A%203026%2C%20B1860BGN%20Villa%20Espa%C3%B1a%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1669826233411!5m2!1ses!2sar"
+              width="1000"
+              height="600"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
       </section>
     </div>
   );
