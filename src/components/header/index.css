@@ -4,15 +4,25 @@
   padding: 20px 15px;
   align-items: center;
   /* position: fixed; */
-  background-color: #a3a3a3;
+  background-color: #fff;
   width: 100%;
   z-index: 1;
   transition-duration: 0.5s;
+}
+@media (min-width: 960px) {
+  .header-contenedor  {
+   padding: 20px 15px 20px 40px;
+  }
 }
 .contenedor__img-logo {
   height: 50px;
   box-shadow: 0px 0px 20px black;
   border-radius: 10px;
+}
+@media (min-width: 960px) {
+  .contenedor__img-logo {
+    height: 60px;
+  }
 }
 .nav-custom {
   display: flex;

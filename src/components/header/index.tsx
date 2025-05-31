@@ -8,12 +8,12 @@ function Header() {
 const logo = "/src/assets/logo-2.JPG";
 
   return (
-    <div className={css["header-contenedor"]}>
+    <div id="inicio" className={css["header-contenedor"]}>
       <a href="#bienvenida">
        <img src={logo} alt="" className={css["contenedor__img-logo"]} />
       </a>
     <div className={css["nav-custom"]}>
-      <a href="#bienvenida" className={css["text-nav"]}>Inicio</a>
+      <a href="#inicio" className={css["text-nav"]}>Inicio</a>
       <a href="#nosotros" className={css["text-nav"]}>Nosotros</a>
       <a href="#servicios" className={css["text-nav"]}>Servicios</a>
       <a href="#contacto" className={css["text-nav"]}>Contacto</a>
