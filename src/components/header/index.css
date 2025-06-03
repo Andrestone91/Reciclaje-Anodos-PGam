@@ -8,6 +8,7 @@
   width: 100%;
   z-index: 1;
   transition-duration: 0.5s;
+  transition: background 0.4s, top 0.3s;
 }
 @media (min-width: 960px) {
   .header-contenedor  {
@@ -35,11 +36,17 @@
   text-decoration: none;
   text-shadow: 0px 0px 1px black;
   color: black;
+   transition: color 0.3s;
 }
 .text-nav:hover {
   text-shadow: 0px 1px 1px black;
   color: mediumspringgreen;
   transition-duration: 0.15s;
+}
+.scrolled .text-nav:hover {
+  text-shadow: 0px 1px 1px black;
+  color: mediumspringgreen !important;
+  transition: color 0.3s;
 }
 @media (min-width: 960px) {
   .text-nav {
@@ -56,4 +63,31 @@
   .burger{
     display: none;
   }
+}
+.show {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+  transition: background 0.3s, opacity 0.2s, transform 0.2s;
+}
+.hide {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-100%);
+  transition: background 0.3s, opacity 0.2s, transform 0.2s;
+}
+.scrolled {
+  background-color: #111 !important; /* o el color negro que prefieras */
+}
+.scrolled .text-nav {
+  color: #fff !important;
+  transition: color 0.3s;
 }
