@@ -74,6 +74,7 @@ function Home() {
           <div className={css["bienvenida__contenedor-text"]}>
             {/* <h1 className={css["titulo-principal"]}>Bienvenidos a&nbsp;</h1> */}
              <h1 className={css["titulo-principal"]}>Reciclaje Anodos PGam</h1>
+            <p className={css.subtitleText}>Centrándose en el reciclaje de restos de titanio y reciclaje de restos de níquel</p>
           </div>
         </div>
       </section>
