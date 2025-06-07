@@ -2,12 +2,19 @@ import React from "react";
 import css from "./index.css";
 import Slider from "react-slick";
 
+// assets
 const img1 = "src/assets/portada-test-2.jpg";
 const img2 = "src/assets/portada-test-3.jpg";
 const icoMaps = "src/assets/maps.png";
 const icoCorreo = "src/assets/correo.png";
 const icoWhatsapp = "src/assets/whatsapp-2.png";
 const icoFacebook = "src/assets/facebook.png";
+const fotoiridio = "src/assets/iridio.webp";
+const fotoRutenio = "src/assets/rutenio.webp";
+const fotoRodio = "src/assets/rodio.webp";
+const fotoCatalizadorIridio = "src/assets/catalizador_de_iridio.webp";
+const fotoCatalizadorRutenio = "src/assets/catalizador_de_rutenio.webp";
+const fotoCatalizadorPaladio = "src/assets/catalizador_de_paladio.webp";
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -31,11 +38,6 @@ function SamplePrevArrow(props) {
 }
 
 function Home() {
-  // icon start
-  // icon end
-  const images = [
-    "src/assets/portada-test-2.jpg",
-    "src/assets/portada-test-3.jpg",]
   const settings = {
     dots: true,
     infinite: true,
@@ -77,6 +79,48 @@ function Home() {
             <p className={css.subtitleText}>Centrándose en el reciclaje de restos de titanio y reciclaje de restos de níquel</p>
           </div>
         </div>
+      </section>
+
+      {/* ¿Qué reciclamos? */}
+      <section id="reciclamos" className={css.reciclamos}>
+        <div className={css["descipcion__contenedor"]}>
+          <div className={css["descripcion__contenedor_info"]}>
+            <h1 className={css["title_text"]}>¿Qué reciclamos?</h1>
+            <p className={css["servicios__text"]}>
+              En Reciclaje Anodos PGam nos especializamos en la compra y reciclaje de materiales industriales de alto valor, ayudando a empresas y particulares a gestionar sus residuos de manera responsable y rentable.
+            </p>
+            <div className={css["queReciclamosGrid"]}>
+              <div className={css["queReciclamosItem"]}>
+                <img src={fotoiridio} alt="iridio" className={css["queReciclamosImg"]} />
+                <h2 className={css["queReciclamosTitle"]}>Reciclaje de iridio</h2>
+                <p className={css["queReciclamosDesc"]}>
+                  PGam espera convertirse en su socio de metal precioso más confiable, permitiendo que el chatarra de metales preciosos renace en el reciclaje profesional.
+                </p>
+              </div>
+              <div className={css["queReciclamosItem"]}>
+                <img src={fotoRutenio} alt="Rutenio" className={css["queReciclamosImg"]} />
+                <h2 className={css["queReciclamosTitle"]}>Reciclaje de rutenio</h2>
+                <p className={css["queReciclamosDesc"]}>
+                  PGam recicla activamente chatarra de Ruthenium, y puede extraer Ruthenium
+                </p>
+              </div>
+              <div className={css["queReciclamosItem"]}>
+                <img src={fotoRodio} alt="Rodio" className={css["queReciclamosImg"]} />
+                <h2 className={css["queReciclamosTitle"]}>Reciclaje de rodio</h2>
+                <p className={css["queReciclamosDesc"]}>
+                   Si los desechos que contienen rodio no se recicla ni se eliminan a voluntad, causará contaminación ambiental. El reciclaje de residuos de rodio puede reducir esta contaminación. Al mismo tiempo, Rhodium juega un papel importante en la purificación de escape del automóvil y otros aspectos, lo que ayuda a proteger el medio ambiente.
+                </p>
+              </div>
+              <div className={css["queReciclamosItem"]}>
+                <img src={fotoCatalizadorIridio} alt="Catalizadoriridio" className={css["queReciclamosImg"]} />
+                <h2 className={css["queReciclamosTitle"]}>Reciclaje de catalizador de Ridio</h2>
+                <p className={css["queReciclamosDesc"]}>
+                  PGam espera convertirse en su reciclaje de metales preciosos más confiables, permitiendo que el chatarra de metales preciosos renace en el reciclaje profesional.
+                </p>
+              </div>
+          </div>
+        </div>
+       </div>
       </section>
 
       {/* Nosotros */}

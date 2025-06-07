@@ -347,3 +347,57 @@
   font-size: 32px;
   font-family: "Roboto", sans-serif;;
 }
+
+/* que reciclamos? */
+.reciclamos {
+  padding: 100px 0;
+}
+/* .queReciclamosWrap {
+  background: #f7f7f7;
+  padding: 100px 0;
+} */
+/* .queReciclamosContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+} */
+.queReciclamosGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  margin-top: 32px;
+}
+.queReciclamosItem {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 32px 24px;
+  max-width: 280px;
+  text-align: center;
+  flex: 1 1 220px;
+}
+.queReciclamosImg {
+  /* width: 80px; */
+  height: 135px;
+  object-fit: contain;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+}
+.queReciclamosImg:hover {
+  transform: scale(1.07);
+  z-index: 2;
+}
+.queReciclamosTitle {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: #1a3e72;
+  font-family: "Roboto", sans-serif;
+}
+.queReciclamosDesc {
+  font-size: 1rem;
+  color: #444;
+  font-family: "Rubik", sans-serif;
+}
+/* fin */
