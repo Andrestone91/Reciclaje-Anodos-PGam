@@ -5,6 +5,10 @@ import Slider from "react-slick";
 // assets
 const img1 = "src/assets/portada-test-2.jpg";
 const img2 = "src/assets/portada-test-3.jpg";
+const icoTelefono = "src/assets/telefono-2.png";
+const icoEvaluacion = "src/assets/evaluacion-2.png";
+const icoDocumentacion = "src/assets/documento.png";
+const icoLiquidacion = "src/assets/liquidacion-3.png";
 const icoMaps = "src/assets/maps.png";
 const icoCorreo = "src/assets/correo.png";
 const icoWhatsapp = "src/assets/whatsapp-2.png";
@@ -81,6 +85,24 @@ function Home() {
         </div>
       </section>
 
+      {/* Nosotros */}
+      <section id="nosotros" className={css.nosotros}>
+        <div className={css["descipcion__contenedor"]}>
+          <div className={css["descripcion__contenedor_info"]}>
+             <h1 className={css["title_text"]}>Sobre nosotros</h1>
+               <p className={css["servicios__text"]} id="animacion__text-izq">
+                Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica
+                {/* <br />
+                <br />
+                 text
+                <br />
+                <br />
+                 text */}
+              </p>
+          </div>
+        </div>
+      </section>
+
       {/* ¿Qué reciclamos? */}
       <section id="reciclamos" className={css.reciclamos}>
         <div className={css["descipcion__contenedor"]}>
@@ -101,14 +123,14 @@ function Home() {
                 <img src={fotoRutenio} alt="Rutenio" className={css["queReciclamosImg"]} />
                 <h2 className={css["queReciclamosTitle"]}>Reciclaje de rutenio</h2>
                 <p className={css["queReciclamosDesc"]}>
-                  PGam recicla activamente chatarra de Ruthenium, y puede extraer Ruthenium
+                  PGam recicla activamente chatarra de Ruthenium, y puede extraer Ruthenium. A partir de los desechos de reutilización, reduciendo la minería de los recursos naturales de rutenio y la realización del reciclaje de los recursos.
                 </p>
               </div>
               <div className={css["queReciclamosItem"]}>
                 <img src={fotoRodio} alt="Rodio" className={css["queReciclamosImg"]} />
                 <h2 className={css["queReciclamosTitle"]}>Reciclaje de rodio</h2>
                 <p className={css["queReciclamosDesc"]}>
-                   Si los desechos que contienen rodio no se recicla ni se eliminan a voluntad, causará contaminación ambiental. El reciclaje de residuos de rodio puede reducir esta contaminación. Al mismo tiempo, Rhodium juega un papel importante en la purificación de escape del automóvil y otros aspectos, lo que ayuda a proteger el medio ambiente.
+                    El reciclaje de residuos de rodio puede reducir esta contaminación. Al mismo tiempo, Rhodium juega un papel importante en la purificación de escape del automóvil y otros aspectos, lo que ayuda a proteger el medio ambiente.
                 </p>
               </div>
               <div className={css["queReciclamosItem"]}>
@@ -118,27 +140,23 @@ function Home() {
                   PGam espera convertirse en su reciclaje de metales preciosos más confiables, permitiendo que el chatarra de metales preciosos renace en el reciclaje profesional.
                 </p>
               </div>
+              <div className={css["queReciclamosItem"]}>
+                <img src={fotoCatalizadorRutenio} alt="CatalizadorRutenio" className={css["queReciclamosImg"]} />
+                <h2 className={css["queReciclamosTitle"]}>Reciclaje de catalizador de Rutenio</h2>
+                <p className={css["queReciclamosDesc"]}>
+                  El reciclaje de catalizadores de rutenio puede aliviar la contradicción entre la oferta de recursos y la demanda hasta cierto punto y garantizar el desarrollo estable de las industrias relacionadas.
+                </p>
+              </div>
+              <div className={css["queReciclamosItem"]}>
+                <img src={fotoCatalizadorPaladio} alt="CatalizadorPaladio" className={css["queReciclamosImg"]} />
+                <h2 className={css["queReciclamosTitle"]}>Reciclaje de catalizador de Paladio</h2>
+                <p className={css["queReciclamosDesc"]}>
+                   A medida que la demanda de rutenio en nuevas industrias de energía, batería y química continúa aumentando, el suministro de 
+                </p>
+              </div>
           </div>
         </div>
        </div>
-      </section>
-
-      {/* Nosotros */}
-      <section id="nosotros" className={css.nosotros}>
-        <div className={css["descipcion__contenedor"]}>
-          <div className={css["descripcion__contenedor_info"]}>
-             <h1 className={css["title_text"]}>Sobre nosotros</h1>
-               <p className={css["servicios__text"]} id="animacion__text-izq">
-                Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica
-                {/* <br />
-                <br />
-                 text
-                <br />
-                <br />
-                 text */}
-              </p>
-          </div>
-        </div>
       </section>
 
       {/* Servicios */}
@@ -150,7 +168,7 @@ function Home() {
         >
           <h1 className={css["title_text"]}>Servicios</h1>
           <p className={css["servicios__text"]}>
-            ¿Desea vender sus catalizadores y/o raEES rápida y fácilmente?
+            ¿Desea vender sus catalizadores rápida y fácilmente?
             Entonces, lo que usted necesita es exactamente nuestro servicio de
             compra. Nuestro equipo de expertos clasificará el valor de su
             material con atención personalizada.
@@ -162,7 +180,7 @@ function Home() {
           <li>
             <div className={css["cont__serv"]}>
               <div>
-                <img className={css["img__services"]} src="./assets/telefono.png" alt="" />
+                <img className={css["img__services"]} src={icoTelefono} alt="" />
               </div>
               <div>Asesoría telefónica</div>
             </div>
@@ -213,7 +231,7 @@ function Home() {
         <div className={css["caja__servicios"]} id="animacion__caja-serv">
           <div className={css["caja__servicios-telefonica"]}>
             <div className={css["caja__servicios-img"]}>
-              <img className={css["img__services"]} src="./assets/telefono-2.png" alt="" />
+              <img className={css["img__services"]} src={icoTelefono} alt="" />
             </div>
             <h2 className={css["caja__servicios-text"]}>Asesoría telefónica</h2>
           </div>
@@ -221,7 +239,7 @@ function Home() {
             <div className={css["caja__servicios-img"]}>
               <img
                 className={css["img__services"]}
-                src="./assets/evaluacion-2.png"
+                src={icoEvaluacion}
                 alt=""
               />
             </div>
@@ -229,7 +247,7 @@ function Home() {
           </div>
           <div className={css["caja__servicios-Documentación"]}>
             <div className={css["caja__servicios-img"]}>
-              <img className={css["img__services"]} src="./assets/documento.png" alt="" />
+              <img className={css["img__services"]} src={icoDocumentacion} alt="" />
             </div>
             <h2 className={css["caja__servicios-text"]}>Documentación</h2>
           </div>
@@ -237,7 +255,7 @@ function Home() {
             <div className={css["caja__servicios-img"]}>
               <img
                 className={css["img__services"]}
-                src="./assets/liquidacion-3.png"
+                src={icoLiquidacion}
                 alt=""
               />
             </div>
@@ -297,9 +315,9 @@ function Home() {
               <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`} 
                 >UBICACION <br />
                 <p className={css["text__ubi"]}>
-                  Berazategui <br />
-                  calle 142 A. nro 3026 <br />
-                  e/ calle 30 y calle 31
+                 localidad <br />
+                 calle Uruguay <br />
+                 
                 </p>
               </label>
             </div>
@@ -307,7 +325,7 @@ function Home() {
               <img className={css["contacto__ico"]} src={icoCorreo} alt="" />
               <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`} 
                 >EMAIL <br />
-                <p className={css["text__ubi"]}>catmetal.arg@gmail.com</p>
+                <p className={css["text__ubi"]}>pgmreciclaje@gmail.com</p>
               </label>
             </div>
 
@@ -316,8 +334,8 @@ function Home() {
               <label className={`${css["servicios__text"]} ${css["info"]} ${css["label"]}`}
                 >TELEFONOS <br />
                 <p className={css["text__ubi"]}>
-                  +54 9 112257-2844 <br />
-                  +54 9 115820-8081 <br />
+                  {/* +54 9 112257-2844 <br /> */}
+                  {/* +54 9 115820-8081 <br /> */}
                 </p>
               </label>
             </div>
