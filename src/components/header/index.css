@@ -13,6 +13,12 @@
 @media (min-width: 960px) {
   .header-contenedor  {
    padding: 20px 15px 20px 40px;
+   height: 11vh;
+  }
+}
+@media (min-width: 1920px) {
+  .header-contenedor  {
+   height: 9vh;
   }
 }
 .contenedor__img-logo {

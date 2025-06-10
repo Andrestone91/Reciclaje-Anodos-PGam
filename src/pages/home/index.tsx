@@ -5,6 +5,10 @@ import Slider from "react-slick";
 // assets
 const img1 = "src/assets/portada-test-2.jpg";
 const img2 = "src/assets/portada-test-3.jpg";
+const fondo1 = "src/assets/fondo-1.webp";
+const fondo2 = "src/assets/fondo-2.webp";
+const fondo3 = "src/assets/fondo-3.webp";
+const fondo4 = "src/assets/fondo-4.webp";
 const icoTelefono = "src/assets/telefono-2.png";
 const icoEvaluacion = "src/assets/evaluacion-2.png";
 const icoDocumentacion = "src/assets/documento.png";
@@ -61,17 +65,24 @@ function Home() {
        <div className={css["slick-conatainer"]}>
          <Slider {...settings}>
           <div>
-            <img src={img1} alt="" width="1580" height="740" style={{
+            <img src={fondo2} alt="" width="1580" height="740" style={{
                   objectFit: "cover",
                   width: "100%",
                   height: "70vh"
                 }}/>
           </div>
           <div>
-            <img src={img2} alt="" width="1580" height="740" style={{
-                  objectFit: "cover",
+            <img src={fondo4} alt="" width="1580" height="740" style={{
                   width: "100%",
-                  height: "70vh"
+                  height: "70vh",
+                  
+                }}/>
+           </div>
+          <div>
+            <img src={fondo1} alt="" width="1580" height="740" style={{
+                  width: "100%",
+                  height: "70vh",
+                          objectFit: "cover",
                 }}/>
            </div>
         </Slider>
@@ -91,11 +102,11 @@ function Home() {
           <div className={css["descripcion__contenedor_info"]}>
              <h1 className={css["title_text"]}>Sobre nosotros</h1>
                <p className={css["servicios__text"]} id="animacion__text-izq">
-                Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica
+                Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica.
+                <br />
+                <br />
+                 Somos un gran importador de reciclaje de metales en China. Principalmente reciclamos y compramos los restos de titanio, incluidos la malla de titanio y la placa de titanio, los ánodos de titanio y los restos de malla de níquel, y el material, incluyendo R 
                 {/* <br />
-                <br />
-                 text
-                <br />
                 <br />
                  text */}
               </p>

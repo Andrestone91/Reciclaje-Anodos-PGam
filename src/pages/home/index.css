@@ -22,7 +22,6 @@
   }
 }
 .bienvenida_contenedor {
-  padding-top: 50px;
   fill: #fff;
   height: 100%;
   display: flex;
@@ -42,7 +41,7 @@
 
   /* comentar para que el texto se vea abajo del carrusel */
   position: absolute;
-  top: 50%;
+  top: 57%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
@@ -58,18 +57,19 @@
   }
 }
 .titulo-principal {
+  text-align: center;
   font-family: "Radio Canada", sans-serif;
-  background: rgba(0, 0, 0, 0.5); /* negro semitransparente */
-  /* color: #fff; */
   color: #51c580;;
-  padding: 12px 32px;
   border-radius: 12px;
   display: inline-block;
-    text-shadow: 2px 2px 8px #000, 0 0 2px #000;
+  text-shadow: 2px 2px 8px #000, 0 0 2px #000;
+  font-size: 27px;
 }
 @media (min-width: 960px) {
   .titulo-principal {
     font-size: 38px;
+    text-align: inherit;
+    padding: 12px 32px;
   }
 }
 .titulo-principal-animacion {
@@ -344,10 +344,23 @@
   }
 }
 .subtitleText{
-  font-size: 32px;
+  font-size: 22px;
   font-family: "Roboto", sans-serif;;
+  color: #fff;
+  padding: 0px 14px;
+  border-radius: 10px;
+  text-align: inherit;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+  display: inline-block;
+  margin-top: 16px;
 }
-
+@media (min-width: 960px) {
+  .subtitleText {
+    font-size: 32px;
+    text-align: center;
+    padding: 10px 24px;
+  }
+}
 /* que reciclamos? */
 .reciclamos {
   padding: 100px 0;
