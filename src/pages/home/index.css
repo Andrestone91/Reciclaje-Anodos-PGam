@@ -414,3 +414,57 @@
   font-family: "Rubik", sans-serif;
 }
 /* fin */
+
+/* valores */
+.section-valores {
+  padding: 100px 0 40px 0;
+  background: url("../../assets/imagenValores.jpg") center center / cover no-repeat;;
+}
+.contenedor__widget {
+  padding: 50px 10px 20px 10px;
+  display: flex;
+  flex-direction: column;
+  width: 98%;
+  align-items: center;
+}
+@media (min-width: 960px) {
+  .contenedor__widget {
+    height: 260px;
+    margin: 40px 10px 0;
+    flex-direction: initial;
+    align-items: initial;
+    justify-content: space-evenly;
+  }
+}
+.widget {
+  width: 311px;
+  text-align: center;
+  padding: 0 20px;
+}
+@media (min-width: 960px) {
+  .widget {
+    height: 222px;
+    text-align: inherit;
+  }
+  .widget:hover {
+    background-color: #164859;
+    transition-duration: 0.5s;
+    border-radius: 10px;
+  }
+}
+.sub__title {
+  color: #acd4d5;
+  font-family: "Roboto", sans-serif;
+}
+.valores__texto-widget {
+  font-family: "Rubik", sans-serif;
+  font-size: 18px;
+  color: #fff;
+}
+.valoresTitle{
+  color:#acd4d5;
+}
+.valoresDesc{
+  width: auto;
+  color:#fff
+}

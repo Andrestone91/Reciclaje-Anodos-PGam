@@ -102,15 +102,18 @@ function Home() {
           <div className={css["descripcion__contenedor_info"]}>
              <h1 className={css["title_text"]}>Sobre nosotros</h1>
                <p className={css["servicios__text"]} id="animacion__text-izq">
-                Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica.
+                 Somos un gran importador de reciclaje de metales en todo latinoamerica. Principalmente reciclamos y compramos los restos de titanio, incluidos la malla de titanio y la placa de titanio, los ánodos de titanio y los restos de malla de níquel, y el material, incluyendo Rutenio(Ru), iridio(Ir), Rodio.
                 <br />
-                <br />
-                 Somos un gran importador de reciclaje de metales en China. Principalmente reciclamos y compramos los restos de titanio, incluidos la malla de titanio y la placa de titanio, los ánodos de titanio y los restos de malla de níquel, y el material, incluyendo R 
                 {/* <br />
+                 Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica.
+                <br /> */}
                 <br />
-                 text */}
+                Nuestra gama de productos es ampliamente, cubrir la recuperación, el refinación y el procesamiento de varios metales preciosos como la malla de titanio, las placas de titanio, la malla de níquel, el rutenio níquel, el platino chapado en níquel, etc., centrándose en proporcionar servicios OEM para empresas e individuos en todo el mundo. Con una artesanía exquisita y un estricto control de calidad, nuestros servicios de productos no solo son bien conocidos en el mercado interno, sino que también muestran una fuerte competitividad en el escenario internacional. These precious metal materials are widely used in chlor-alkali industry, aluminum foil, copper foil industry, industrial wastewater treatment, ion water production, electrochemical treatment of organic matter and organic electrochemical synthesis, electrolytic purification of gas, seawater desalination, oxidant regeneration and circulation, jewelry, electronics industry, aerospace, medical technology and other fields, injecting new vitality into the development of various industrias.
               </p>
           </div>
+          {/* <div>
+            2
+          </div> */}
         </div>
       </section>
 
@@ -313,6 +316,31 @@ function Home() {
           </ul>
         </div> */}
       </div>
+      </section>
+
+      <section className={css["section-valores"]}>
+          <div className={css["descripcion__contenedor_info"]}>
+         <h1 className={`${css["title_text"]} ${css.valoresTitle}`}>Nuestra misión y visión</h1>
+            <p className={`${css["servicios__text"]} ${css.valoresDesc}`}>
+               Alto valor agregado, contenido de alta tecnología, amplias áreas de aplicación y demandas estables del mercado.
+            <br />
+            <br />
+          </p>
+         <div className={css["contenedor__widget"]} id="animacion__widget">
+           <div className={css.widget}>
+             <h2 className={css["sub__title"]}>Valores</h2>
+             <p className={css["valores__texto-widget"]}>Innovación, colaboración, integridad y doble victoria.</p>
+           </div>
+           <div className={css.widget}>
+             <h2 className={css["sub__title"]}>Misiones</h2>
+             <p className={css["valores__texto-widget"]}>Explorando restos preciosos y creando brillantez.</p>
+           </div>
+           <div className={css.widget}>
+             <h2 className={css["sub__title"]}>Visiones</h2>
+             <p className={css["valores__texto-widget"]}>Perseguir la excelencia y nunca terminar.</p>
+           </div>
+         </div>
+       </div>
       </section>
 
       {/* Contacto */}
