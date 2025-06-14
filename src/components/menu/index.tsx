@@ -4,10 +4,19 @@ import { Dropdown, Space } from 'antd';
 import css from "./index.css";
 
 const burger = '/src/assets/burger.png';
+
+const handleMenuNavClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
+  e.preventDefault();
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+};
+
 const items: MenuProps['items'] = [
   {
     label: (
-      <a href="#bienvenida" className={css.burgerText} rel="noopener noreferrer">
+      <a href="#bienvenida" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "bienvenida")}>
        Inicio
       </a>
     ),
@@ -18,7 +27,7 @@ const items: MenuProps['items'] = [
   },
   {
     label: (
-      <a href="#nosotros" className={css.burgerText} rel="noopener noreferrer">
+      <a href="#nosotros" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "nosotros")}>
        Quienes somos
       </a>
     ),
@@ -29,7 +38,7 @@ const items: MenuProps['items'] = [
   },
   {
     label: (
-      <a href="#servicios" className={css.burgerText} rel="noopener noreferrer">
+      <a href="#servicios" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "servicios")}>
         Servicios
       </a>
     ),
@@ -40,7 +49,7 @@ const items: MenuProps['items'] = [
   },
   {
     label: (
-      <a href="#contacto" className={css.burgerText} rel="noopener noreferrer">
+      <a href="#contacto" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "contacto")}>
        Contacto
       </a>
     ),
@@ -48,11 +57,15 @@ const items: MenuProps['items'] = [
   },
 ];
 
-const OptionMenu: React.FC = () => (
+const OptionMenu: React.FC<{ scrolled?: boolean }>  = ({ scrolled }) => (
   <Dropdown menu={{ items }} trigger={['click']}>
     <a onClick={(e) => e.preventDefault()}>
       <Space>
-       <img className={css.imgBurger} src={burger} alt="" />
+  <img
+  className={`${css.imgBurger} ${scrolled ? css.imgBurgerWhite : css.imgBurgerBlack}`}
+  src={burger}
+  alt=""
+/>
       </Space>
     </a>
   </Dropdown>

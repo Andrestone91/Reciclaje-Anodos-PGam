@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import css from "./index.css";
 import Slider from "react-slick";
 
@@ -57,6 +57,28 @@ function Home() {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
   };
+
+  const reciclamosGridRef = useRef<HTMLDivElement>(null);
+  const [showReciclamosGrid, setShowReciclamosGrid] = useState(false);
+
+  useEffect(() => {
+    const observer = new window.IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setShowReciclamosGrid(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    if (reciclamosGridRef.current) {
+      observer.observe(reciclamosGridRef.current);
+    }
+    return () => observer.disconnect();
+  }, []);
+  
   return (
     <div className={css.bodyc}>
 
@@ -125,7 +147,7 @@ function Home() {
             <p className={css["servicios__text"]}>
               En Reciclaje Anodos PGam nos especializamos en la compra y reciclaje de materiales industriales de alto valor, ayudando a empresas y particulares a gestionar sus residuos de manera responsable y rentable.
             </p>
-            <div className={css["queReciclamosGrid"]}>
+            <div  ref={reciclamosGridRef}   className={`${css["queReciclamosGrid"]} ${showReciclamosGrid ? css["queReciclamosGrid--show"] : ""}`}>
               <div className={css["queReciclamosItem"]}>
                 <img src={fotoiridio} alt="iridio" className={css["queReciclamosImg"]} />
                 <h2 className={css["queReciclamosTitle"]}>Reciclaje de iridio</h2>
@@ -318,6 +340,7 @@ function Home() {
       </div>
       </section>
 
+      {/* valores */}
       <section className={css["section-valores"]}>
           <div className={css["descripcion__contenedor_info"]}>
          <h1 className={`${css["title_text"]} ${css.valoresTitle}`}>Nuestra misión y visión</h1>
