@@ -481,3 +481,88 @@
   width: auto;
   color:#fff
 }
+
+/* nueva seccion */
+.applWrap {
+  background: #f7f7f7;
+  padding: 70px 0;
+}
+.applContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.applTitle {
+  font-size: 2.2rem;
+  color: #1a3e72;
+  margin-bottom: 40px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+.titleRestos{
+  font-size: 38px;
+  text-align: center;
+}
+.applRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 56px;
+  gap: 48px;
+  flex-direction: row;
+  opacity: 0;
+  transform: translateY(80px);
+  transition: opacity 0.8s cubic-bezier(0.4,0,0.2,1), transform 0.8s cubic-bezier(0.4,0,0.2,1);
+}
+.applRowShow {
+  opacity: 1;
+  transform: translateY(0);
+}
+.applRowReverse {
+  flex-direction: row-reverse;
+}
+.applImgBox {
+  /* flex: 1 1 420px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.applImgBig {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 18px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.10);
+  object-fit: cover;
+}
+.applInfo {
+  flex: 1 1 420px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 36px 32px;
+}
+.applItemTitle {
+  font-size: 1.4rem;
+  color: #1a3e72;
+  margin-bottom: 18px;
+  font-family: "Roboto", sans-serif;
+}
+.applItemDesc {
+  font-size: 1.08rem;
+  color: #444;
+  font-family: "Rubik", sans-serif;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .applRow, .applRowReverse {
+    flex-direction: column !important;
+    gap: 24px;
+  }
+  .applImgBig, .applInfo {
+    max-width: 100%;
+  }
+  .applInfo {
+    padding: 24px 12px;
+  }
+}

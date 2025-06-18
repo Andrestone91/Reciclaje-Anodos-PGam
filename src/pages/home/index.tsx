@@ -23,6 +23,9 @@ const fotoRodio = "src/assets/rodio.webp";
 const fotoCatalizadorIridio = "src/assets/catalizador_de_iridio.webp";
 const fotoCatalizadorRutenio = "src/assets/catalizador_de_rutenio.webp";
 const fotoCatalizadorPaladio = "src/assets/catalizador_de_paladio.webp";
+const restos1 = "src/assets/restos1.webp";
+const restos2 = "src/assets/restos2.webp";
+const restos3 = "src/assets/restos3.webp"; 
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -58,21 +61,31 @@ function Home() {
     prevArrow: <SamplePrevArrow />,
   };
 
-  const reciclamosGridRef = useRef<HTMLDivElement>(null);
-  const [showReciclamosGrid, setShowReciclamosGrid] = useState(false);
-
+const reciclamosGridRef = useRef<HTMLDivElement>(null);
+const [showReciclamosGrid, setShowReciclamosGrid] = useState(false);
+const applRowRefs = [useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null), useRef<HTMLDivElement>(null)];
+const [showRows, setShowRows] = useState([false, false, false, false]);
   useEffect(() => {
     const observer = new window.IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const idx = Number(entry.target.getAttribute("data-idx"));
           if (entry.isIntersecting) {
             setShowReciclamosGrid(true);
-            observer.disconnect();
+            // observer.disconnect();
+                setShowRows(prev => {
+            const updated = [...prev];
+            updated[idx] = true;
+            return updated;
+          });
           }
         });
       },
       { threshold: 0.1 }
     );
+     applRowRefs.forEach(ref => {
+    if (ref.current) observer.observe(ref.current);
+  });
     if (reciclamosGridRef.current) {
       observer.observe(reciclamosGridRef.current);
     }
@@ -339,6 +352,58 @@ function Home() {
         </div> */}
       </div>
       </section>
+
+    <section className={css.applWrap}>
+          <div className={css.applContainer}>
+    
+  <div className={css["descripcion__contenedor_info"]}>
+    <h1 className={`${css["title_text"]} ${css.titleRestos}`}>Aplicaciones de las industrias de los restos de metal</h1>
+
+    {/* Primer bloque: imagen izquierda, texto derecha */}
+    <div className={`${css.applRow} ${showRows[0] ? css.applRowShow : ""}`} style={{ marginTop: "50px" }} ref={applRowRefs[0]} data-idx={0}>
+      <div className={css.applImgBox}>
+        <img src={restos1} alt="Industria química" className={css.applImgBig} />
+      </div>
+      <div className={css.applInfo}>
+        <h3 className={css.applItemTitle}>Anodes de titanio se destrozan de la electrólisis de lámina de cobre</h3>
+        <p className={css.applItemDesc}>
+           En el proceso de electrólisis de aluminio de cobre, las placas de titanio se usan como ánodo y juega un papel vital.Estamos dedicados a reciclar los restos del ánodo de titanio de la industria de la electrólisis de aluminio.Podemos proporcionar un servic
+        </p>
+      </div>
+    </div>
+
+    {/* Segundo bloque: imagen derecha, texto izquierda */}
+    <div   ref={applRowRefs[1]}
+  data-idx={1}
+  className={`${css.applRow} ${css.applRowReverse} ${showRows[1] ? css.applRowShow : ""}`}>
+      <div className={css.applImgBox}>
+        <img src={restos2} alt="Electroquímica" className={css.applImgBig} />
+      </div>
+      <div className={css.applInfo}>
+        <h3 className={css.applItemTitle}>Fraspes del ánodo de titanio de electrolizeros de membrana iónica</h3>
+        <p className={css.applItemDesc}>
+          Huatuo comprende profundamente la importancia de la responsabilidad social corporativa y practica activamente el concepto de desarrollo sostenible. Estamos comprometidos con la protección del medio ambiente, implementamos estrictos estándares de protecció
+        </p>
+      </div>
+    </div>
+
+    {/* Tercer bloque: imagen izquierda, texto derecha */}
+    <div   ref={applRowRefs[2]}
+          data-idx={2}
+           className={`${css.applRow} ${showRows[2] ? css.applRowShow : ""}`}>
+      <div className={css.applImgBox}>
+        <img src={restos3} alt="Energía" className={css.applImgBig} />
+      </div>
+      <div className={css.applInfo}>
+        <h3 className={css.applItemTitle}>Titanium Meshes Scraps de la producción de placa de circuito impreso</h3>
+        <p className={css.applItemDesc}>
+          Estamos dedicados a reciclar la chatarra del ánodo de titanio de la producción de placa de circuito impreso.A través de procesos de reciclaje y procesamiento profesionales, extraemos y reutilizamos los componentes valiosos, reduciendo así los costos de p
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
 
       {/* valores */}
       <section className={css["section-valores"]}>
