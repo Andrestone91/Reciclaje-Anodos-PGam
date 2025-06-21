@@ -25,18 +25,7 @@ const items: MenuProps['items'] = [
   {
     type: 'divider',
   },
-  {
-    label: (
-      <a href="#nosotros" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "nosotros")}>
-       Quienes somos
-      </a>
-    ),
-    key: '1',
-  },
-  {
-    type: 'divider',
-  },
-  {
+    {
     label: (
       <a href="#servicios" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "servicios")}>
         Servicios
@@ -44,7 +33,18 @@ const items: MenuProps['items'] = [
     ),
     key: '2',
   },
-   {
+ {
+    type: 'divider',
+  },
+  {
+    label: (
+      <a href="#nosotros" className={css.burgerText} rel="noopener noreferrer" onClick={e => handleMenuNavClick(e, "nosotros")}>
+       Nosotros
+      </a>
+    ),
+    key: '1',
+  },
+  {
     type: 'divider',
   },
   {

@@ -8,7 +8,7 @@ function Footer() {
             
     <img className={css["img__footer"]} src={logo} alt="" />
      <div className={css.texto}>
-         <p className={css.title}>2025 © Anodos PGam</p>
+         <p className={css.title}>Anodos PGam © 2025 </p>
         </div>
   </div>
   );

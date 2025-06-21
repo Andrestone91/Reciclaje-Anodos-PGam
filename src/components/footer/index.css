@@ -9,6 +9,10 @@
   justify-content: space-between;
 }
 @media (min-width: 960px) {
+  .footer{
+      flex-direction: inherit;
+      justify-content: space-around;
+  }
 }
 .texto {
   font-family: "Montserrat", sans-serif;

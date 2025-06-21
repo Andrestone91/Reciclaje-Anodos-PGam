@@ -87,7 +87,15 @@
 }
 .slick-conatainer{
   width: 100%;
-    margin: auto;
+  margin: auto;
+}
+.slider-container-servicios{
+  width: 100%;
+}
+@media (min-width: 960px) {
+.slider-container-servicios{
+  width: 50%;
+}
 }
 .nosotros{
   background-color: #9eb7e52b;
@@ -339,9 +347,9 @@
   width: 170px;
 }
 @media (min-width: 960px) {
-  .ubica {
+  /* .ubica {
     margin-top: 0;
-  }
+  } */
 }
 .subtitleText{
   font-size: 22px;
@@ -565,4 +573,11 @@
   .applInfo {
     padding: 24px 12px;
   }
+}
+.carruselImg {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }

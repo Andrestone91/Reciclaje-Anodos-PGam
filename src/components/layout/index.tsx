@@ -10,7 +10,7 @@ function Layout() {
     <div className={css.root}>
       <Header />
       <Outlet />
-      <BotonWhatsapp></BotonWhatsapp>
+      {/* <BotonWhatsapp></BotonWhatsapp> */}
       <Footer />
     </div>
   );

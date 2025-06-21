@@ -50,8 +50,8 @@ const lastScrollY = useRef(0);
       </a>
     <div className={css["nav-custom"]}>
       <a href="#bienvenida" className={css["text-nav"]} onClick={e => handleNavClick(e, "bienvenida")}>Inicio</a>
-      <a href="#nosotros" className={css["text-nav"]} onClick={e => handleNavClick(e, "nosotros")}>Nosotros</a>
       <a href="#servicios" className={css["text-nav"]} onClick={e => handleNavClick(e, "servicios")}>Servicios</a>
+      <a href="#nosotros" className={css["text-nav"]} onClick={e => handleNavClick(e, "nosotros")}>Nosotros</a>
       <a href="#contacto" className={css["text-nav"]} onClick={e => handleNavClick(e, "contacto")}>Contacto</a>
       {/* <a 
         href="https://www.facebook.com/profile.php?id=100046977355703" target="_blank"><img className="contacto__ico"src="./assets/social_facebook_fb_35.png"/>
