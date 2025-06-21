@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import css from "./index.css";
 import Slider from "react-slick";
+import ContactoForm from "components/formulario";
 
 // assets
 const foto1 = "src/assets/foto1.jpeg";
@@ -458,7 +459,7 @@ const [showRows, setShowRows] = useState([false, false, false, false]);
                  Compramos anodos de titanio ,niquel para su reciclaje. Estamos en toda latinoamerica.
                 <br /> */}
                 <br />
-                Nuestra gama de productos es ampliamente, cubrir la recuperación, el refinación y el procesamiento de varios metales preciosos como la malla de titanio, las placas de titanio, la malla de níquel, el rutenio níquel, el platino chapado en níquel, etc., centrándose en proporcionar servicios OEM para empresas e individuos en todo el mundo. Con una artesanía exquisita y un estricto control de calidad, nuestros servicios de productos no solo son bien conocidos en el mercado interno, sino que también muestran una fuerte competitividad en el escenario internacional. These precious metal materials are widely used in chlor-alkali industry, aluminum foil, copper foil industry, industrial wastewater treatment, ion water production, electrochemical treatment of organic matter and organic electrochemical synthesis, electrolytic purification of gas, seawater desalination, oxidant regeneration and circulation, jewelry, electronics industry, aerospace, medical technology and other fields, injecting new vitality into the development of various industrias.
+                Nuestra gama de productos es ampliamente, cubrir la recuperación, el refinación y el procesamiento de varios metales preciosos como la malla de titanio, las placas de titanio, la malla de níquel, el rutenio níquel, el platino chapado en níquel, etc., centrándose en proporcionar servicios OEM para empresas e individuos en todo el mundo. Con una artesanía exquisita y un estricto control de calidad, nuestros servicios de productos no solo son bien conocidos en el mercado interno, sino que también muestran una fuerte competitividad en el escenario internacional. Estos materiales de metales preciosos son ampliamente utilizados en la industria cloroalcalina, papel de aluminio, industria de papel de cobre, tratamiento de aguas residuales industriales, producción de agua iónica, tratamiento electroquímico de materia orgánica y síntesis electroquímica orgánica, purificación electrolítica de gas, desalinización de agua de mar, regeneración y circulación de oxidantes, joyería, industria electrónica, aeroespacial, tecnología médica y otros campos, inyectando nueva vitalidad al desarrollo de varias industrias..
               </p>
           </div>
           <div>
@@ -588,6 +589,9 @@ const [showRows, setShowRows] = useState([false, false, false, false]);
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
+        </div>
+        <div className={css.formContainer}>
+          <ContactoForm></ContactoForm>
         </div>
       </section>
     </div>
